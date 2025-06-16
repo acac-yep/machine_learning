@@ -198,15 +198,9 @@ Epoch=50 时的 prediction[0] 为 0.99992，这甚至高于 Epoch=100 时的 pre
 #### 4.2.2 batch size 的选择  
 
 批大小的选择对训练速度和内存占用有显著影响。原模型使用的 batch size 为 128，我们尝试了将 batch size 取为 256（均为两套全连接层，全部启用 ReLU 函数），结果如下：  
+![batch size=128时的训练曲线](picture/batch_size128.png)
 
-<div style="display: flex; justify-content: space-between;">
-    <div style="width: 48%;">
-        ![batch size=128时的训练曲线](picture/batch_size128.png)
-    </div>
-    <div style="width: 48%;">
-        ![batch size=256时的训练曲线](picture/batch_size256.png)
-    </div>
-</div>
+![batch size=256时的训练曲线](picture/batch_size256.png)
 
 可以看出，batch size 的大小对训练准确度的影响并不显著，但较大的 batch size 可以加快训练速度，在我们的实验中，batch size=256 时的训练时间大概比 batch size=128 时缩短了 17%。  
 
