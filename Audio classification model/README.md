@@ -96,7 +96,7 @@ def extract_features(file_names, bands=64, frames=64):
 ```
 
 **示例梅尔频谱图：**  
-![示例梅尔频谱图](\\picture\\Mel Spectrogram.png)
+![示例梅尔频谱图](picture/Mel_Spectrogram.png)
 
 ### 2.3 迁移学习模型构建——模型架构详细说明  
 
@@ -175,7 +175,7 @@ model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accur
 各类指标报告显示模型对大多数类别的表现良好，特别是 gun_shot、jackhammer 等类别。  
 
 **分类混淆矩阵如下：**  
-![分类混淆矩阵](picture/confusion matrix.png)
+![分类混淆矩阵](picture/confusion_matrix.png)
 
 误分类主要集中在相似环境声，如 street_music 与 children_playing 之间。  
 
@@ -201,10 +201,10 @@ Epoch=50 时的 prediction[0] 为 0.99992，这甚至高于 Epoch=100 时的 pre
 
 <div style="display: flex; justify-content: space-between;">
     <div style="width: 48%;">
-        ![batch size=128时的训练曲线](picture/batchsize128.png)
+        ![batch size=128时的训练曲线](picture/batch_size128.png)
     </div>
     <div style="width: 48%;">
-        ![batch size=256时的训练曲线](picture/batchsize256.png)
+        ![batch size=256时的训练曲线](picture/batch_size256.png)
     </div>
 </div>
 
