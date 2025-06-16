@@ -116,7 +116,7 @@ def extract_features(file_names, bands=64, frames=64):
 | Dense_5（输出层） | 全连接层 (Dense) | (None, 10)     | 输出层，使用 softmax 激活，输出 10 类音频事件的概率分布                  |
 
 **VGG-16 网络运行层次示意图：**  
-![VGG-16网络运行层次示意图](\\picture\\cengci.png)
+![VGG-16网络运行层次示意图](picture/cengci.png)
 
 在使用神经网络前，需先进行迁移学习特征提取：  
 
@@ -175,7 +175,7 @@ model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accur
 各类指标报告显示模型对大多数类别的表现良好，特别是 gun_shot、jackhammer 等类别。  
 
 **分类混淆矩阵如下：**  
-![分类混淆矩阵](picture/confusion%20matrix.png)
+![分类混淆矩阵](picture/confusion matrix.png)
 
 误分类主要集中在相似环境声，如 street_music 与 children_playing 之间。  
 
@@ -201,10 +201,10 @@ Epoch=50 时的 prediction[0] 为 0.99992，这甚至高于 Epoch=100 时的 pre
 
 <div style="display: flex; justify-content: space-between;">
     <div style="width: 48%;">
-        ![batch size=128时的训练曲线](picture//batch%20size128.png)
+        ![batch size=128时的训练曲线](picture/batchsize128.png)
     </div>
     <div style="width: 48%;">
-        ![batch size=256时的训练曲线](picture/batch%20size256.png)
+        ![batch size=256时的训练曲线](picture/batchsize256.png)
     </div>
 </div>
 
